@@ -1,7 +1,8 @@
 <div style="text-align: center">
   <h1>Welcome to blog-app!</h1>
 </div>
-<button></button>
+<button mat-raised-button [routerLink]="['/']" > Home</button>
+<button mat-raised-button [routerLink]="['/profile']" >Profile</button>
 <div>Message: {{ hello$ | async | json }}</div>
 <router-outlet></router-outlet>
 
