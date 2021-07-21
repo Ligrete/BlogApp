@@ -84,7 +84,7 @@
               "apps/blog-app/src/favicon.ico",
               "apps/blog-app/src/assets"
             ],
-            "styles": ["apps/blog-app/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css", "apps/blog-app/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
