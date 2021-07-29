@@ -1,18 +1,28 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './modules/main/main.component';
-import { ProfileComponent } from './modules/profile/profile.component';
+import { Routes, RouterModule } from '@angular/router';
+
 
 const routes: Routes = [
-
-  { path: '', component:  MainComponent},
-  { path: 'main', component:  MainComponent},
-  { path: 'profile', component:  ProfileComponent},
-  { path: '**', redirectTo: '/'}
+  {
+    path: 'customers',
+    loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule)
+  },
+  {
+    path: 'orders',
+    loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule)
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }

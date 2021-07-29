@@ -1,8 +1,20 @@
-<div style="text-align: center">
-  <h1>Welcome to blog-app!</h1>
-</div>
-<button mat-raised-button [routerLink]="['/']" > Home</button>
-<button mat-raised-button [routerLink]="['/profile']" >Profile</button>
-<div>Message: {{ hello$ | async | json }}</div>
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+   <mat-icon>menu</mat-icon>
+ </button>
+ <span>My App</span>
+ <span class="example-spacer"></span>
+ <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+   <mat-icon>favorite</mat-icon>
+ </button>
+ <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <mat-icon>share</mat-icon>
+</button>
+</mat-toolbar>
+
+<button routerLink="/customers">Customers</button>
+<button routerLink="/orders">Orders</button>
+<button routerLink="">Home</button>
+
 <router-outlet></router-outlet>
 
