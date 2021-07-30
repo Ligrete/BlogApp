@@ -1,20 +1,9 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-   <mat-icon>menu</mat-icon>
- </button>
- <span>My App</span>
- <span class="example-spacer"></span>
- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-   <mat-icon>favorite</mat-icon>
- </button>
- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-  <mat-icon>share</mat-icon>
-</button>
-</mat-toolbar>
-
-<button routerLink="/customers">Customers</button>
-<button routerLink="/orders">Orders</button>
-<button routerLink="">Home</button>
-
-<router-outlet></router-outlet>
-
+<div style="text-align: center">
+  <h1>Welcome to blog-app!</h1>
+  <img
+    width="450"
+    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
+    alt="Nx - Smart, Extensible Build Framework"
+  />
+</div>
+<div>Message: {{ hello$ | async | json }}</div>

@@ -6,8 +6,4 @@ export class AppService {
   getData(): Message {
     return { message: 'Welcome to api!' };
   }
-
-  getProfile(): any {
-    return { name: 'Vilsur', lastName: 'Karimov' };
-  }
 }
