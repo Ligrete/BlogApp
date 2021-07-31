@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apihost: 'http://188.93.210.186:8089',
 };
 
 /*
